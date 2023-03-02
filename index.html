@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <!-- 시간폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,200&display=swap" rel="stylesheet">
+    <!-- 모달창폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1><a href="#"><img src="img/logo.png" alt="로고"></a></h1>
+    </header>
+    <!-- nav -->
+    <nav>
+        <h2 class="hide">메인네비게이션</h2>
+        <span>click</span>
+    </nav>
+    <!-- main -->
+    <main>
+        <!-- clock -->
+        <article>
+            <!-- 2021년11월16일 -->
+            <div id="day01">
+                <dl>
+                    <dt  class="hide">오늘년도</dt>
+                    <dd class="userY"><span>????</span><em>년</em></dd>
+                    <dt  class="hide">오늘월</dt>
+                    <dd class="userMM"><span>??</span><em>월</em></dd>
+                    <dt  class="hide">오늘일</dt>
+                    <dd class="userD"><span>??</span><em>일</em></dd>
+                </dl>
+            </div>
+            <!--실시간 -->
+            <div id="day02">
+                <dl>
+                    <dt class="hide">현재시</dt>
+                    <dd><span>??</span><em>:</em></dd>
+                    <dt class="hide">현재분</dt>
+                    <dd><span>??</span><em>:</em></dd>
+                    <dt class="hide">현재초</dt>
+                    <dd><span>??</span></dd>
+                </dl>
+            </div>
+        </article>
+  
+    <!-- aside 목록  -->
+    <div id="modal">
+        <div class=close>
+                <span></span>
+                <span></span>
+        </div>
+        <section>
+        <h3 class="hide">서브메뉴</h3>
+        <div class="newday">
+        <ul>
+            <li><a href="#" class="Wakeup">Wake up</a></li>
+            <li><a href="#" class="GoingtoWork">Going to Work</a></li>
+            <li><a href="#" class="MorningWorking">Working</a></li>
+            <li><a href="#" class="Lunch">Lunch</a></li>
+            <li><a href="#" class="Meeting">Meeting</a></li>
+            <li><a href="#" class="AfternoonWorking">Working </a></li>
+            <li><a href="#" class="BacktoHome">Back to Home</a></li>
+            <li><a href="#" class="Dinner">Dinner</a></li>
+            <li><a href="#" class="Freetime">Free time</a></li>
+            <li><a href="#" class="Sleeping">Sleeping</a></li>
+            <li><a href="#" class="now">now</a></li>
+            <!-- wake up
+                Going to Work
+                morning Working
+                Lunch
+                Meeting
+                afternoon Working 
+                Back to the home
+                Dinner
+                Free time
+                Sleep
+
+            -->
+        </ul>
+         </div>
+        </section>
+    </div>
+    </main>
+    <!-- footer -->
+    <footer>
+         <div id="back01">
+            <small class="hide">&copy; copyright work 2021 by SoYoungPark</small>
+        </div>
+        <!-- 추가되는 div / nowBtn();함수로-->
+    </footer>
+    <script>
+        $(function(){
+            nowTimer();
+            setInterval(nowTimer,1000);
+            // 배경
+            nowBack();
+            // 버튼
+            nowBtn();
+            // modal
+            modal();
+        });
+    </script>
+</html>

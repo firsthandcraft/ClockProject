@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+</style> */
+/* font-family: 'Candal', sans-serif; */
+/* 모달창폰트
+링크---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+=-----
+임포트
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+</style>
+font-family: 'Ubuntu', sans-serif; */
+.hide{
+    width: 0; height: 0;
+    font-size: 0; line-height: 0;
+    position: absolute;
+    visibility: hidden;
+}
+body{}
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 20px;
+}
+header>h1{
+    float: right;
+    margin-right: 50px;
+}
+/* nav */
+nav{
+    width: 120px;
+    height: 120px;
+   background: url('../img/try.png') no-repeat left bottom;
+    position: fixed;
+    left: 0; bottom: 0;   opacity: 0.8;
+}
+nav>span{
+    font:16px 'Ubuntu', sans-serif;
+    position: absolute;
+    left: 10px; bottom: 15px;
+ 
+}
+nav>span:hover{
+    color: #ab47a5;
+}
+/* main */
+main{
+    position: relative;
+}
+/* article */
+article{
+    width: 772px;
+    height: 370px;
+    /* position: fixed;
+    top: 10%;
+    left: 10%; */
+    margin: 8%;
+}
+dl>dt,dl>dd{
+    display: inline-block;
+}
+/* #day01 */
+#day01{
+}
+
+dl>dd>em{
+    font-style: normal;
+    padding: 0 10px;
+}
+#day01>dl{
+    width: 500px;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font: bold 40px 'Exo', sans-serif;
+    color: #fff;
+    text-align:start;
+    text-indent: 10px; 
+    text-shadow:3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+/* #day02 */
+#day02{
+    width: 900px;
+    height: 200px;
+}
+#day02>dl{
+    font: bold 150px 'Exo', sans-serif;
+    color: #fff;
+    text-shadow:3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+/* modal */
+#modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    
+}
+#modal>section{
+    width: 100%;
+    height: 100vh;
+    background-color: #e3aedf;
+    padding-top: 150px;
+}
+#modal>section>.newday{
+    width: 650px;
+    height: 650px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:url("../img/clock.png")no-repeat;
+    background-size:95%;
+}
+#modal>section>.newday>ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#modal>section ul>li{
+    font:bold 30px 'Ubuntu', sans-serif;
+    position: absolute;
+}
+#modal>section ul>li a{
+    color:#333;transition:400ms;
+}#modal>section ul>li a:hover{color:#ab47a5;}
+#modal>section ul>li:nth-child(1){
+    top: 250px;
+    right: 140px;
+}
+#modal>section ul>li:nth-child(2){
+    bottom: 270px;
+    right: 140px;
+}
+#modal>section ul>li:nth-child(3){
+    bottom:200px;
+    right: 200px;
+}
+#modal>section ul>li:nth-child(4){
+    bottom: 135px;
+    right: 310px;
+}
+#modal>section ul>li:nth-child(5){
+    bottom: 180px;
+    left: 160px;
+}
+#modal>section ul>li:nth-child(6){
+    bottom: 250px;
+    left: 100px;
+}
+#modal>section ul>li:nth-child(7){
+    top: 300px;
+    left: 70px;
+}
+#modal>section ul>li:nth-child(8){
+    top: 230px;
+    left: 80px;
+}
+#modal>section ul>li:nth-child(9){
+    top: 150px;
+   left: 120px;
+}
+#modal>section ul>li:nth-child(10){
+    top: 100px;
+   right: 270px;
+}
+#modal>section ul>li:nth-child(11){
+    bottom: 100px;
+   right: 100px;
+}
+#modal>div.close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    right: 50px;
+    
+}
+#modal>div.close>span{
+    width: 50px;
+    height: 3px;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-top: 22px;
+}
+#modal>div.close>span:nth-child(2){
+    transform: rotate(-45deg);
+}
+
+
+/* footer */
+footer>div{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -100;
+
+}
+footer>#back01{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/Wakeup.jpg) no-repeat center top;
+    background-size: auto 100%;
+    z-index: -100;
+}
